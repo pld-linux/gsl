@@ -79,7 +79,6 @@ Narzêdzia dla gsl.
 %patch -p1
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -90,10 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-strip --strip-unneede $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
-
-gzip -9nf {AUTHORS,ChangeLog,NEWS,README,KNOWN-PROBLEMS,THANKS,TODO} \
-	$RPM_BUILD_ROOT%{_infodir}/*.inf*
+gzip -9nf AUTHORS ChangeLog NEWS README KNOWN-PROBLEMS THANKS TODO
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
