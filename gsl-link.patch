@@ -1,0 +1,11 @@
+--- gsl-1.4/Makefile.am.orig	2003-07-29 21:50:29.000000000 +0200
++++ gsl-1.4/Makefile.am	2003-12-28 18:34:51.874256552 +0100
+@@ -17,7 +17,7 @@
+ 
+ lib_LTLIBRARIES = libgsl.la
+ libgsl_la_SOURCES = version.c
+-libgsl_la_LIBADD = $(SUBLIBS)
++libgsl_la_LIBADD = $(SUBLIBS) cblas/libgslcblas.la
+ libgsl_la_LDFLAGS = -version-info $(GSL_LT_VERSION)
+ noinst_HEADERS = templates_on.h templates_off.h
+ 
