@@ -9,6 +9,7 @@ Patch1: gsl-glibc21.patch
 Patch2: gsl-foo.patch
 Copyright: GPL 
 Group: System Environment/Libraries
+Prereq:		/usr/sbin/fix-info-dir
 BuildRoot: /var/tmp/gsl-root
 
 %description
@@ -47,8 +48,7 @@ make CFLAGS="${RPM_OPT_FLAGS}" install
 
 # change back when shared libs working
 #%post devel
-/sbin/install-info /usr/info/gsl-ref.info.gz /usr/info/dir > /dev/null 2>&1
-exit 0
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
 /sbin/ldconfig
@@ -56,9 +56,7 @@ exit 0
 # change back to devel when shared libs working
 #%preun devel
 %preun 
-if [ "$1" = 0 ]; then
-    /sbin/install-info --delete /usr/info/gsl-ref.info.gz /usr/info/dir
-fi
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
