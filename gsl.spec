@@ -13,7 +13,7 @@ License:	GPL
 Group:		System Environment/Libraries
 Group(pl):	Biblioteki
 Prereq:		/usr/sbin/fix-info-dir
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr
 
@@ -27,7 +27,6 @@ against the GSL allows programs to access functions which can handle many
 of the problems encountered in scientific computing.  Install the gsl 
 package if you need a library for high-level scientific numerical analysis. 
   
-
 %prep
 %setup -q
 #%patch -p1
@@ -54,7 +53,6 @@ install %{SOURCE2} $RPM_BUILD_DIR/%name-%version
 
 gzip -9 {AUTHORS,ChangeLog,NEWS,README,KNOWN-PROBLEMS,THANKS,TODO}
 gzip -9 $RPM_BUILD_ROOT%{_infodir}/*.inf*
-
 
 %post
 /sbin/ldconfig
