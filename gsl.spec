@@ -5,22 +5,21 @@ Summary(pt_BR):	Biblioteca cientМfica GNU
 Summary(ru):	Научная библиотека GNU для числового анализа
 Summary(uk):	Наукова б╕бл╕отека GNU для числового анал╕зу
 Name:		gsl
-Version:	1.4
-Release:	2
+Version:	1.5
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	7513e13525c073dc07e02cc4354294e2
+# Source0-md5:	de5ae1cce71645b40461a59ba8c9cf43
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-am18.patch
-Patch2:		%{name}-link.patch
+Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool >= 1:1.4.2-9
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libgsl0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The gsl package includes the GNU Scientific Library (GSL). The GSL is
@@ -66,7 +65,7 @@ Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
 Summary(ru):	Файлы для разработки с научной библиотекой GNU (GSL)
 Summary(uk):	Файли для розробки з науковою б╕бл╕отекою GNU (GSL)
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libgsl0-devel
 
 %description devel
@@ -94,7 +93,7 @@ Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com gsl
 Summary(ru):	Статические библиотеки для разработки с научной библиотекой GNU (GSL)
 Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з науковою б╕бл╕отекою GNU (GSL)
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static gsl librariries.
@@ -117,7 +116,7 @@ Bibliotecas estАticas para desenvolvimento com gsl.
 Summary:	gsl utility programs
 Summary(pl):	NarzЙdzia dla gsl
 Group:		Applications/Science
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description progs
 gsl utility programs.
@@ -129,12 +128,12 @@ NarzЙdzia dla gsl.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -160,11 +159,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/gsl-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
