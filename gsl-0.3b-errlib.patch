@@ -1,0 +1,10 @@
+--- gsl-0.3b/err/Makefile.am.msf	Sat May  9 13:34:57 1998
++++ gsl-0.3b/err/Makefile.am	Sat May  9 13:35:37 1998
+@@ -1,4 +1,6 @@
+-noinst_LIBRARIES = libgslerr.a libgsltest.a
++lib_LIBRARIES = libgslerr.a
++
++noinst_LIBRARIES = libgsltest.a
+ 
+ include_HEADERS = gsl_errno.h gsl_test.h
+ 
