@@ -11,6 +11,7 @@ Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
+# Source0-md5:	3696de79ad2c788871fae698e41f671b
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-acfix.patch
 URL:		http://sourceware.cygnus.com/gsl/
