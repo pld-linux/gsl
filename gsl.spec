@@ -3,13 +3,14 @@ Summary(es):	Biblioteca científica del GNU
 Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
+Patch1:		%{name}-acfix.patch
 URL:		http://sourceware.cygnus.com/gsl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -98,6 +99,7 @@ Narzêdzia dla gsl.
 %prep
 %setup -q 
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
@@ -114,7 +116,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
