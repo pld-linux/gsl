@@ -4,7 +4,7 @@ Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
 Version:	1.1.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Libraries
@@ -15,6 +15,7 @@ BuildRequires:	libtool
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	libgsl0
 
 %description
 The gsl package includes the GNU Scientific Library (GSL). The GSL is
@@ -54,6 +55,7 @@ Summary(pl):	Pliki nag³ówkowe i dokumentacja do bibliotek gsl
 Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Obsoletes:	libgsl0-devel
 
 %description devel
 Header files for developing programs using gsl.
