@@ -1,14 +1,13 @@
 Summary:	The GNU Scientific Library for numerical analysis
 Name:		gsl
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	GPL
 Group:		Libraries
 Group(pl):	Biblioteki
-Source0:	ftp://nis-ftp.lanl.gov/pub/users/rosalia/%{name}-%{version}.tar.gz
 Source0:	ftp://sourceware.cygnus.com/pub/gsl/%{name}-%{version}.tar.gz
 Source2:	ftp://sourceware.cygnus.com/pub/gsl/%{name}-ref.ps.gz
-Patch0:		gsl-0.3b-errlib.patch
+#Patch0:	gsl-0.3b-errlib.patch
 #Patch1:	gsl-glibc21.patch
 #Patch2:	gsl-foo.patch
 URL:		http://www.gnu.org/
@@ -26,6 +25,15 @@ Linking against the GSL allows programs to access functions which can
 handle many of the problems encountered in scientific computing.
 Install the gsl package if you need a library for high-level
 scientific numerical analysis.
+
+%description -l pl
+Pakiet gsl zawiera biblioteke funkcji przydatna w pracy naukowej dostepnych na licencji (GNU). 
+GSL jest zbiorem funkcji napissanych w jezyku C, do azanlizy numerycznej. GSL jest jeszcze w bardzo 
+wczesnym stadium tworzenia. W tej chwili zawiera generatory liczb losowych, FFT, znajdowanie miejsc 
+zerowych. W przyszlosci, bedzie zawierac calkowanie metoda Monte Carlo oraz funkcje specjalne. Linkowanie
+z GSL pozwala Twoim programom na dostep do funkcji, ktore moga byc urzyteczne w wielu problemach 
+pojawiajacych sie w obliczeniach naukowych. Zainstaluj gsl jesli potrzebujesz biblioteki do obliczen 
+nu,erycznych.
 
 %prep
 %setup -q
