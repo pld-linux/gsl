@@ -5,6 +5,7 @@ Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
 Version:	1.1.1
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
