@@ -1,7 +1,7 @@
 Summary: The GNU Scientific Library for numerical analysis.
 Name: gsl
 Version: 0.3f
-Release: 2
+Release: 3
 URL: http://www.gnu.org
 Source: ftp://nis-ftp.lanl.gov/pub/users/rosalia/gsl-%{version}.tar.gz
 Patch: gsl-0.3b-errlib.patch
@@ -54,8 +54,8 @@ make CFLAGS="${RPM_OPT_FLAGS}" install
 /sbin/ldconfig
 
 # change back to devel when shared libs working
-#%preun devel
-%preun 
+#%postun devel
+%postun 
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
