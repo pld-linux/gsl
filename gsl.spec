@@ -3,7 +3,7 @@ Summary(es):	Biblioteca científica del GNU
 Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
-Version:	1.1
+Version:	20020221
 Release:	1
 License:	GPL
 Group:		Libraries
@@ -121,7 +121,7 @@ gsl utility programs.
 Narzêdzia dla gsl.
 
 %prep
-%setup -q
+%setup -q -n gsl
 %patch0 -p1
 
 %build
