@@ -1,0 +1,11 @@
+--- gsl-1.0/multimin/Makefile.am~	Thu Nov 15 03:47:11 2001
++++ gsl-1.0/multimin/Makefile.am	Thu Nov 15 03:47:11 2001
+@@ -2,8 +2,6 @@
+ 
+ pkginclude_HEADERS = gsl_multimin.h
+ 
+-noinst_HEADERS = 
+-
+ INCLUDES= -I$(top_builddir)
+ 
+ libgslmultimin_la_SOURCES = fdfminimizer.c steepest_descent.c conjugate_fr.c conjugate_pr.c convergence.c diff.c vector_bfgs.c
