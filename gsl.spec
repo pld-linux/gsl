@@ -4,16 +4,16 @@ Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
 Version:	1.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://sourceware.cygnus.com/gsl/
-BuildRequires:	libtool
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libgsl0
 
@@ -149,6 +149,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gsl-histogram
 %attr(755,root,root) %{_bindir}/gsl-randist
+%{_mandir}/man1/gsl-histogram.1*
+%{_mandir}/man1/gsl-randist.1*
 
 %files static
 %defattr(644,root,root,755)
