@@ -1,0 +1,14 @@
+--- gsl-0.6/doc/gsl-ref.texi	Sat May 20 03:05:20 2000
++++ gsl-0.6.new/doc/gsl-ref.texi	Wed Jun  7 08:05:53 2000
+@@ -7,9 +7,9 @@
+ @c @setchapternewpage odd
+ @c %**end of header
+ 
+-@dircategory Scientific software
++@dircategory Libraries:
+ @direntry
+-* gsl-ref: (gsl-ref).                   GNU Scientific Library -- Reference
++* gsl-ref: (gsl-ref).			GNU Scientific Library -- Reference
+ @end direntry
+ 
+ @tex
