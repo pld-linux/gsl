@@ -3,8 +3,8 @@ Summary(es):	Biblioteca científica del GNU
 Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
-Version:	1.1.1
-Release:	2
+Version:	1.2
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
@@ -115,7 +115,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-gzip -9nf AUTHORS ChangeLog NEWS README KNOWN-PROBLEMS THANKS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -135,7 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/gsl-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
