@@ -137,7 +137,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/gsl-config
 %attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 %{_aclocaldir}/gsl.m4
 %{_libdir}/pkgconfig/*
 %{_includedir}/gsl
