@@ -4,7 +4,7 @@ Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca cientÌfica GNU
 Name:		gsl
 Version:	0.9.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Group(de):	Libraries
@@ -16,6 +16,7 @@ Group(ru):	‚…¬Ã…œ‘≈À…
 Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
+patch1:		%{name}-amfix.patch
 URL:		http://sourceware.cygnus.com/gsl/
 BuildRequires:	libtool
 BuildRequires:	autoconf
@@ -131,12 +132,14 @@ NarzÍdzia dla gsl.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 libtoolize --copy --force
 aclocal
 autoconf
+automake -a -c
 %configure
 %{__make}
 
