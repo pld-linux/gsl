@@ -5,6 +5,7 @@ Release:	1
 URL:		http://www.gnu.org
 #Source:	ftp://nis-ftp.lanl.gov/pub/users/rosalia/%{name}-%{version}.tar.gz
 Source:		ftp://sourceware.cygnus.com/pub/gsl/%{name}-%{version}.tar.gz
+Source2:	ftp://sourceware.cygnus.com/pub/gsl/%{name}-ref.ps.gz
 #Patch:		gsl-0.3b-errlib.patch
 #Patch1:		gsl-glibc21.patch
 #Patch2:		gsl-foo.patch
@@ -66,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 #/usr/lib/lib*.so
 
 #%files devel
-%doc AUTHORS COPYING ChangeLog INSTALL NEWS README
+%doc AUTHORS COPYING ChangeLog INSTALL NEWS README $(SOURCE2)
 #/usr/lib/libgmp.so
 /usr/lib/lib*.a
 /usr/include/*
