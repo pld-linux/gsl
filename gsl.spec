@@ -6,17 +6,19 @@ Summary(ru):	Научная библиотека GNU для числового анализа
 Summary(uk):	Наукова б╕бл╕отека GNU для числового анал╕зу
 Name:		gsl
 Version:	1.4
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
 # Source0-md5:	7513e13525c073dc07e02cc4354294e2
 Patch0:		%{name}-info.patch
-URL:		http://sourceware.cygnus.com/gsl/
-BuildRequires:	autoconf
+Patch1:		%{name}-am18.patch
+Patch2:		%{name}-link.patch
+URL:		http://www.gnu.org/software/gsl/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 1:1.4.2-9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libgsl0
 
@@ -114,7 +116,7 @@ Bibliotecas estАticas para desenvolvimento com gsl.
 %package progs
 Summary:	gsl utility programs
 Summary(pl):	NarzЙdzia dla gsl
-Group:		Development/Libraries
+Group:		Applications/Science
 Requires:	%{name} = %{epoch}:%{version}
 
 %description progs
@@ -124,11 +126,12 @@ gsl utility programs.
 NarzЙdzia dla gsl.
 
 %prep
-%setup  -q
+%setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -165,9 +168,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gsl-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
-%{_aclocaldir}/gsl.m4
-%{_libdir}/pkgconfig/*
 %{_includedir}/gsl
+%{_aclocaldir}/gsl.m4
+%{_pkgconfigdir}/*
 %{_infodir}/gsl*
 %{_mandir}/man1/gsl-config.1*
 %{_mandir}/man3/*
