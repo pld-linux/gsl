@@ -63,10 +63,9 @@ Biblioteki statyczne gsl.
 %package progs
 Summary:	gsl utility programs
 Summary(pl):	Narzêdzia dla gsl
-Group:		Applications/Graphics
-Group(pl):	Aplikacje/Grafika
+Group:		Development/Libraries
+Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
-Obsoletes:	netpbm
 
 %description progs
 gsl utility programs.
@@ -109,17 +108,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_lindir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/gsl-config
-%attr(755,root,root) %{_lindir}/lib*.so
-%attr(755,root,root) %{_lindir}/lib*.la
+%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.la
 %{_aclocaldir}/gsl.m4
 %{_includedir}/gsl
-%{_infodir}/gsl*.gz
+%{_infodir}/gsl*
 
 %files progs
 %defattr(644,root,root,755)
