@@ -4,7 +4,7 @@ Version:	0.5
 Release:	1
 URL:		http://www.gnu.org
 #Source:	ftp://nis-ftp.lanl.gov/pub/users/rosalia/%{name}-%{version}.tar.gz
-Source:		ftp://sourceware.cugnus.com/pub/gsl/%{name}-%{version}.tar.gz
+Source:		ftp://sourceware.cygnus.com/pub/gsl/%{name}-%{version}.tar.gz
 #Patch:		gsl-0.3b-errlib.patch
 #Patch1:		gsl-glibc21.patch
 #Patch2:		gsl-foo.patch
