@@ -5,15 +5,14 @@ Summary(pt_BR):	Biblioteca cientМfica GNU
 Summary(ru):	Научная библиотека GNU для числового анализа
 Summary(uk):	Наукова б╕бл╕отека GNU для числового анал╕зу
 Name:		gsl
-Version:	1.3
+Version:	1.4
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	3696de79ad2c788871fae698e41f671b
+# Source0-md5:	7513e13525c073dc07e02cc4354294e2
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-acfix.patch
 URL:		http://sourceware.cygnus.com/gsl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -130,7 +129,6 @@ NarzЙdzia dla gsl.
 %prep
 %setup  -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 rm -f missing
