@@ -1,8 +1,8 @@
 Summary:	The GNU Scientific Library for numerical analysis
 Summary:	GNU Scientific Library do analizy numerycznej
 Name:		gsl
-Version:	0.7
-Release:	4
+Version:	0.9
+Release:	2
 License:	GPL
 Group:		Libraries
 Group(de):	Libraries
@@ -145,6 +145,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_aclocaldir}/gsl.m4
 %{_includedir}/gsl
 %{_infodir}/gsl*
+%{_mandir}/man1/gsl-config.1*
+%{_mandir}/man3/*
 
 %files progs
 %defattr(644,root,root,755)
