@@ -12,7 +12,6 @@ Source2:	ftp://sourceware.cygnus.com/pub/gsl/%{name}-ref.ps.gz
 License:	GPL
 Group:		System Environment/Libraries
 Group(pl):	Biblioteki
-Prereq:		/usr/sbin/fix-info-dir
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr
@@ -57,12 +56,12 @@ gzip -9 $RPM_BUILD_ROOT%{_infodir}/*.inf*
 %post
 /sbin/ldconfig
 
-/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
 /sbin/ldconfig
 
-/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
