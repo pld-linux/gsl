@@ -1,15 +1,23 @@
 Summary:	The GNU Scientific Library for numerical analysis
+Summary:	GNU Scientific Library do analizy numerycznej
 Name:		gsl
 Version:	0.7
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries
 Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 Source0:	ftp://sourceware.cygnus.com/pub/gsl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/
+BuildRequires:	libtool
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,8 +48,12 @@ Summary:	Header files for developing programs using gsl
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja do bibliotek gsl
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -55,8 +67,12 @@ Summary:	Static gsl librariries
 Summary(pl):	Biblioteki statyczne gsl
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -70,8 +86,12 @@ Summary:	gsl utility programs
 Summary(pl):	NarzЙdzia dla gsl
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description progs
@@ -85,6 +105,9 @@ NarzЙdzia dla gsl.
 %patch -p1
 
 %build
+libtoolize --copy --force
+aclocal
+autoconf
 %configure
 %{__make}
 
