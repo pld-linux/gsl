@@ -56,7 +56,7 @@ make CFLAGS="${RPM_OPT_FLAGS}" install
 
 # change back to devel when shared libs working
 #%postun devel
-%postun 
+#%postun 
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
