@@ -68,7 +68,7 @@ Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
 Summary(ru):	Файлы для разработки с научной библиотекой GNU (GSL)
 Summary(uk):	Файли для розробки з науковою б╕бл╕отекою GNU (GSL)
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 Obsoletes:	libgsl0-devel
 
 %description devel
@@ -96,7 +96,7 @@ Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com gsl
 Summary(ru):	Статические библиотеки для разработки с научной библиотекой GNU (GSL)
 Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з науковою б╕бл╕отекою GNU (GSL)
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 Static gsl librariries.
@@ -119,7 +119,7 @@ Bibliotecas estАticas para desenvolvimento com gsl.
 Summary:	gsl utility programs
 Summary(pl):	NarzЙdzia dla gsl
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description progs
 gsl utility programs.
