@@ -18,6 +18,7 @@ URL:		http://www.gnu.org/software/gsl/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool >= 1:1.4.2-9
+BuildRequires:	texinfo
 Obsoletes:	libgsl0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
