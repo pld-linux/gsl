@@ -2,6 +2,8 @@ Summary:	The GNU Scientific Library for numerical analysis
 Summary(es):	Biblioteca cientМfica del GNU
 Summary(pl):	GNU Scientific Library do analizy numerycznej
 Summary(pt_BR):	Biblioteca cientМfica GNU
+Summary(ru):	Научная библиотека GNU для числового анализа
+Summary(uk):	Наукова б╕бл╕отека GNU для числового анал╕зу
 Name:		gsl
 Version:	1.3
 Release:	1
@@ -50,10 +52,20 @@ Esta И a biblioteca cientМfica do projeto GNU. Fornece acesso a
 funГУes para tratar muitos problemas que surgem em computaГЦo
 cientМfica.
 
+%description -l ru
+Это научная библиотека GNU. Сборка с ней дает доступ к функциям,
+решающим многие задачи, типичные для научных расчетов.
+
+%description -l uk
+Це наукова б╕бл╕отека GNU. Зборка з нею да╓ доступ до функц╕й, що
+дозволяють розв'язати багато задач, типових для наукових розрахунк╕в.
+
 %package devel
 Summary:	Header files for developing programs using gsl
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja do bibliotek gsl
 Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
+Summary(ru):	Файлы для разработки с научной библиотекой GNU (GSL)
+Summary(uk):	Файли для розробки з науковою б╕бл╕отекою GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Obsoletes:	libgsl0-devel
@@ -68,10 +80,20 @@ Pliki nagЁСwkowe i dokumentacja do bibliotek gsl.
 Arquivos de inclusЦo, bibliotecas e documentaГЦo necessАrio para
 desenvolver aplicativos que utilizam a biblioteca gsl.
 
+%description devel -l ru
+Это библиотеки, хедеры и документация по использованию научной
+библиотеки GNU в ваших программах.
+
+%description devel -l uk
+Це б╕бл╕отеки, хедери та документац╕я по використанню науково╖
+б╕бл╕отеки GNU у ваших програмах.
+
 %package static
 Summary:	Static gsl librariries
 Summary(pl):	Biblioteki statyczne gsl
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com gsl
+Summary(ru):	Статические библиотеки для разработки с научной библиотекой GNU (GSL)
+Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з науковою б╕бл╕отекою GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
@@ -83,6 +105,14 @@ Biblioteki statyczne gsl.
 
 %description static -l pt_BR
 Bibliotecas estАticas para desenvolvimento com gsl.
+
+%description static -l ru
+Это статическая библиотека для использования научной библиотеки GNU в
+ваших программах.
+
+%description static -l uk
+Це статична б╕бл╕отека для використання науково╖ б╕бл╕отеки GNU у
+ваших програмах.
 
 %package progs
 Summary:	gsl utility programs
@@ -97,7 +127,7 @@ gsl utility programs.
 NarzЙdzia dla gsl.
 
 %prep
-%setup -q 
+%setup  -q
 %patch0 -p1
 %patch1 -p1
 
