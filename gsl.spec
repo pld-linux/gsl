@@ -23,16 +23,17 @@ Install the gsl package if you need a library for high-level
 scientific numerical analysis.
 
 %description -l pl
-Pakiet gsl zawiera biblioteke funkcji przydatna w pracy naukowej
-dostepnych na licencji (GNU). GSL jest zbiorem funkcji napissanych w
-jezyku C, do azanlizy numerycznej. GSL jest jeszcze w bardzo wczesnym
-stadium tworzenia. W tej chwili zawiera generatory liczb losowych,
-FFT, znajdowanie miejsc zerowych. W przyszlosci, bedzie zawierac
-calkowanie metoda Monte Carlo oraz funkcje specjalne. Linkowanie z GSL
-pozwala Twoim programom na dostep do funkcji, ktore moga byc
-urzyteczne w wielu problemach pojawiajacych sie w obliczeniach
-naukowych. Zainstaluj gsl jesli potrzebujesz biblioteki do obliczen
-nu,erycznych.
+Pakiet gsl zawiera bibliotekê funkcji przydatnych w pracy naukowej
+dostêpnych na licencji (GNU). GSL jest zbiorem funkcji napisanych 
+wjezyku C, przeznaczonych do analizy numerycznej. 
+Biblioteka jest jeszcze w bardzo wczesnym stadium tworzenia. 
+W tej chwili zawiera generatory liczb losowych, FFT, 
+znajdowanie miejsc zerowych. W przysz³o¶ci, bêdzie zawieraæ
+ca³kowanie metod± Monte Carlo oraz funkcje specjalne. Linkowanie z GSL
+pozwala Twoim programom na dostep do funkcji, które moga byæ
+u¿yteczne w wielu problemach pojawiajacych sie w obliczeniach
+naukowych. Zainstaluj gsl jesli potrzebujesz biblioteki do obliczeñ
+numerycznych.
 
 %package devel
 Summary:	Header files for developing programs using gsl
