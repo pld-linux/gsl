@@ -57,7 +57,6 @@ científica.
 
 %package devel
 Summary:	Header files for developing programs using gsl
-Summary(es):	Development tools for gsl applications
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do bibliotek gsl
 Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
 Group:		Development/Libraries
@@ -76,17 +75,12 @@ Header files for developing programs using gsl.
 %description -l pl devel
 Pliki nag³ówkowe i dokumentacja do bibliotek gsl.
 
-%description -l es devel
-The header files, libraries and documentation needed for developing
-gsl applications.
-
 %description -l pt_BR devel
 Arquivos de inclusão, bibliotecas e documentação necessário para
 desenvolver aplicativos que utilizam a biblioteca gsl.
 
 %package static
 Summary:	Static gsl librariries
-Summary(es):	Static libraries for gsl development
 Summary(pl):	Biblioteki statyczne gsl
 Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com gsl
 Group:		Development/Libraries
@@ -101,9 +95,6 @@ Requires:	%{name}-devel = %{version}
 
 %description static
 Static gsl librariries.
-
-%description -l es static
-Static libraries for gsl development.
 
 %description static -l pl
 Biblioteki statyczne gsl.
@@ -152,6 +143,9 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS ChangeLog NEWS README KNOWN-PROBLEMS THANKS TODO
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -160,9 +154,6 @@ gzip -9nf AUTHORS ChangeLog NEWS README KNOWN-PROBLEMS THANKS TODO
 
 %postun devel
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
