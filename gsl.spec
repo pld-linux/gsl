@@ -28,8 +28,6 @@ package, simulated annealing and root finding. In the future, it will
 include numerical and Monte Carlo integration and special functions.
 Linking against the GSL allows programs to access functions which can
 handle many of the problems encountered in scientific computing.
-Install the gsl package if you need a library for high-level
-scientific numerical analysis.
 
 %description -l es
 Esta es la biblioteca científica del GNU. Ofrece acceso a funciones
@@ -38,14 +36,13 @@ para manejar muchos problemas que aparecen en computación científica.
 %description -l pl
 Pakiet gsl zawiera bibliotekê funkcji przydatnych w pracy naukowej
 dostêpnych na licencji (GNU). GSL jest zbiorem funkcji napisanych
-wjezyku C, przeznaczonych do analizy numerycznej. Biblioteka jest
+w jêzyku C, przeznaczonych do analizy numerycznej. Biblioteka jest
 jeszcze w bardzo wczesnym stadium tworzenia. W tej chwili zawiera
 generatory liczb losowych, FFT, znajdowanie miejsc zerowych. W
 przysz³o¶ci, bêdzie zawieraæ ca³kowanie metod± Monte Carlo oraz
-funkcje specjalne. Linkowanie z GSL pozwala Twoim programom na dostep
-do funkcji, które moga byæ u¿yteczne w wielu problemach pojawiajacych
-sie w obliczeniach naukowych. Zainstaluj gsl jesli potrzebujesz
-biblioteki do obliczeñ numerycznych.
+funkcje specjalne. Konsolidacja z GSL pozwala programom na dostêp do
+funkcji, które moga byæ przydatne w rozwi±zywaniu wielu problemów
+pojawiaj±cych siê w obliczeniach naukowych.
 
 %description -l pt_BR
 Esta é a biblioteca científica do projeto GNU. Fornece acesso a
