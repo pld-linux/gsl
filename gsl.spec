@@ -15,6 +15,8 @@ Group(pl):	Biblioteki
 Prereq:		/usr/sbin/fix-info-dir
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define	_prefix	/usr
+
 %description
 The gsl package includes the GNU Scientific Library (GSL).  The GSL is a 
 collection of routines for numerical analysis, written in C.  The GSL is in 
@@ -33,42 +35,45 @@ package if you need a library for high-level scientific numerical analysis.
 #%patch2 -p1 -b .foo
 
 %build
-./configure --prefix=${RPM_BUILD_ROOT}/usr
+./configure --prefix=%{_prefix}
 touch doc/gsl-ref.info
 make CFLAGS="${RPM_OPT_FLAGS}"
 
 %install
-install -d ${RPM_BUILD_ROOT}/usr/lib ${RPM_BUILD_ROOT}/usr/info \
-         ${RPM_BUILD_ROOT}/usr/include
+rm -rf $RPM_BUILD_ROOT
 
-make CFLAGS="${RPM_OPT_FLAGS}" install
-#cd ${RPM_BUILD_ROOT}/usr/lib
-#strip *
+install -d ${RPM_BUILD_ROOT}{%{_libdir},%{_infodir},%{_includedir}}
+install -d $RPM_BUILD_ROOT%{_docdir}/%name-%version
+
+make DESTDIR=$RPM_BUILD_ROOT CFLAGS="${RPM_OPT_FLAGS}"	\
+    infodir=%{_datadir}/info install
+
+strip $RPM_BUILD_ROOT%{_bindir}/{gsl-h*,gsl-r*}
+
+install %{SOURCE2} $RPM_BUILD_DIR/%name-%version
+
+gzip -9 {AUTHORS,ChangeLog,NEWS,README,KNOWN-PROBLEMS,THANKS,TODO}
+gzip -9 $RPM_BUILD_ROOT%{_infodir}/*.inf*
+
 
 %post
 /sbin/ldconfig
 
-# change back when shared libs working
-#%post devel
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
 /sbin/ldconfig
 
-# change back to devel when shared libs working
-#%postun devel
-#%postun 
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-#/usr/lib/lib*.so
-
-#%files devel
-%doc AUTHORS COPYING ChangeLog INSTALL NEWS README $(SOURCE2)
-#/usr/lib/libgmp.so
-/usr/lib/lib*.a
-/usr/include/*
-/usr/info/gsl-ref.info*
+%defattr(644,root,root,755)
+%doc {AUTHORS,ChangeLog,KNOWN-PROBLEMS,README,NEWS,THANKS,gsl-ref.ps}.gz 
+%attr(755,root,root) %{_bindir}/gsl-*
+%attr(644,root,root) %{_includedir}/gsl/*.h
+%attr(644,root,root) %{_libdir}/gsl/libgsl*.a
+%attr(644,root,root) %{_libdir}/gsl/libutils.a
+%attr(644,root,root) %{_infodir}/gsl*.gz
