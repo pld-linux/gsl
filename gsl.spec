@@ -57,10 +57,10 @@ Requires:	%{name} = %{version}
 %description devel
 Header files for developing programs using gsl.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumentacja do bibliotek gsl.
 
-%description -l pt_BR devel
+%description devel -l pt_BR
 Arquivos de inclusão, bibliotecas e documentação necessário para
 desenvolver aplicativos que utilizam a biblioteca gsl.
 
@@ -77,7 +77,7 @@ Static gsl librariries.
 %description static -l pl
 Biblioteki statyczne gsl.
 
-%description -l pt_BR static
+%description static -l pt_BR
 Bibliotecas estáticas para desenvolvimento com gsl.
 
 %package progs
@@ -89,7 +89,7 @@ Requires:	%{name} = %{version}
 %description progs
 gsl utility programs.
 
-%description -l pl progs
+%description progs -l pl
 Narzêdzia dla gsl.
 
 %prep
