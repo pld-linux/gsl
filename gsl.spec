@@ -7,13 +7,6 @@ Version:	20020221
 Release:	1
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://sourceware.cygnus.com/gsl/
@@ -59,13 +52,6 @@ Summary:	Header files for developing programs using gsl
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja do bibliotek gsl
 Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -83,13 +69,6 @@ Summary:	Static gsl librariries
 Summary(pl):	Biblioteki statyczne gsl
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com gsl
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -105,13 +84,6 @@ Bibliotecas estАticas para desenvolvimento com gsl.
 Summary:	gsl utility programs
 Summary(pl):	NarzЙdzia dla gsl
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description progs
