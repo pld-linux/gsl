@@ -42,7 +42,7 @@ jeszcze w bardzo wczesnym stadium tworzenia. W tej chwili zawiera
 generatory liczb losowych, FFT, znajdowanie miejsc zerowych. W
 przysz³o¶ci, bêdzie zawieraæ ca³kowanie metod± Monte Carlo oraz
 funkcje specjalne. Konsolidacja z GSL pozwala programom na dostêp do
-funkcji, które moga byæ przydatne w rozwi±zywaniu wielu problemów
+funkcji, które mog± byæ przydatne w rozwi±zywaniu wielu problemów
 pojawiaj±cych siê w obliczeniach naukowych.
 
 %description -l pt_BR
