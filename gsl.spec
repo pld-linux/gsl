@@ -1,5 +1,7 @@
 Summary:	The GNU Scientific Library for numerical analysis
-Summary:	GNU Scientific Library do analizy numerycznej
+Summary(es):	Biblioteca científica del GNU
+Summary(pl):	GNU Scientific Library do analizy numerycznej
+Summary(pt_BR):	Biblioteca científica GNU
 Name:		gsl
 Version:	0.9.1
 Release:	1
@@ -31,6 +33,10 @@ handle many of the problems encountered in scientific computing.
 Install the gsl package if you need a library for high-level
 scientific numerical analysis.
 
+%description -l es
+Esta es la biblioteca científica del GNU. Ofrece acceso a funciones
+para manejar muchos problemas que aparecen en computación científica.
+
 %description -l pl
 Pakiet gsl zawiera bibliotekê funkcji przydatnych w pracy naukowej
 dostêpnych na licencji (GNU). GSL jest zbiorem funkcji napisanych
@@ -43,9 +49,16 @@ do funkcji, które moga byæ u¿yteczne w wielu problemach pojawiajacych
 sie w obliczeniach naukowych. Zainstaluj gsl jesli potrzebujesz
 biblioteki do obliczeñ numerycznych.
 
+%description -l pt_BR
+Esta é a biblioteca científica do projeto GNU. Fornece acesso a
+funções para tratar muitos problemas que surgem em computação
+científica.
+
 %package devel
 Summary:	Header files for developing programs using gsl
+Summary(es):	Development tools for gsl applications
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do bibliotek gsl
+Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -62,9 +75,19 @@ Header files for developing programs using gsl.
 %description -l pl devel
 Pliki nag³ówkowe i dokumentacja do bibliotek gsl.
 
+%description -l es devel
+The header files, libraries and documentation needed for developing
+gsl applications.
+
+%description -l pt_BR devel
+Arquivos de inclusão, bibliotecas e documentação necessário para
+desenvolver aplicativos que utilizam a biblioteca gsl.
+
 %package static
 Summary:	Static gsl librariries
+Summary(es):	Static libraries for gsl development
 Summary(pl):	Biblioteki statyczne gsl
+Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com gsl
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -78,8 +101,14 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static gsl librariries.
 
+%description -l es static
+Static libraries for gsl development.
+
 %description static -l pl
 Biblioteki statyczne gsl.
+
+%description -l pt_BR static
+Bibliotecas estáticas para desenvolvimento com gsl.
 
 %package progs
 Summary:	gsl utility programs
