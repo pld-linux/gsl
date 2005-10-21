@@ -5,13 +5,13 @@ Summary(pt_BR):	Biblioteca cientМfica GNU
 Summary(ru):	Научная библиотека GNU для числового анализа
 Summary(uk):	Наукова б╕бл╕отека GNU для числового анал╕зу
 Name:		gsl
-Version:	1.6
+Version:	1.7
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	2c63ab9b925a7be70a5a5b4e0a95ea03
+# Source0-md5:	521b9aa094a3dc2cb088f29efca0bda3
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
