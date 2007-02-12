@@ -1,9 +1,9 @@
 Summary:	The GNU Scientific Library for numerical analysis
-Summary(es):	Biblioteca cientМfica del GNU
-Summary(pl):	GNU Scientific Library do analizy numerycznej
-Summary(pt_BR):	Biblioteca cientМfica GNU
-Summary(ru):	Научная библиотека GNU для числового анализа
-Summary(uk):	Наукова б╕бл╕отека GNU для числового анал╕зу
+Summary(es.UTF-8):   Biblioteca cientц╜fica del GNU
+Summary(pl.UTF-8):   GNU Scientific Library do analizy numerycznej
+Summary(pt_BR.UTF-8):   Biblioteca cientц╜fica GNU
+Summary(ru.UTF-8):   п²п╟я┐я┤п╫п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ GNU п╢п╩я▐ я┤п╦я│п╩п╬п╡п╬пЁп╬ п╟п╫п╟п╩п╦п╥п╟
+Summary(uk.UTF-8):   п²п╟я┐п╨п╬п╡п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ GNU п╢п╩я▐ я┤п╦я│п╩п╬п╡п╬пЁп╬ п╟п╫п╟п╩я√п╥я┐
 Name:		gsl
 Version:	1.8
 Release:	1
@@ -31,40 +31,40 @@ include numerical and Monte Carlo integration and special functions.
 Linking against the GSL allows programs to access functions which can
 handle many of the problems encountered in scientific computing.
 
-%description -l es
-Esta es la biblioteca cientМfica del GNU. Ofrece acceso a funciones
-para manejar muchos problemas que aparecen en computaciСn cientМfica.
+%description -l es.UTF-8
+Esta es la biblioteca cientц╜fica del GNU. Ofrece acceso a funciones
+para manejar muchos problemas que aparecen en computaciцЁn cientц╜fica.
 
-%description -l pl
-Pakiet gsl zawiera bibliotekЙ funkcji przydatnych w pracy naukowej
-dostЙpnych na licencji (GNU). GSL jest zbiorem funkcji napisanych
-w jЙzyku C, przeznaczonych do analizy numerycznej. Biblioteka jest
+%description -l pl.UTF-8
+Pakiet gsl zawiera bibliotekд≥ funkcji przydatnych w pracy naukowej
+dostд≥pnych na licencji (GNU). GSL jest zbiorem funkcji napisanych
+w jд≥zyku C, przeznaczonych do analizy numerycznej. Biblioteka jest
 jeszcze w bardzo wczesnym stadium tworzenia. W tej chwili zawiera
 generatory liczb losowych, FFT, znajdowanie miejsc zerowych. W
-przyszЁo╤ci, bЙdzie zawieraФ caЁkowanie metod╠ Monte Carlo oraz
-funkcje specjalne. Konsolidacja z GSL pozwala programom na dostЙp do
-funkcji, ktСre mog╠ byФ przydatne w rozwi╠zywaniu wielu problemСw
-pojawiaj╠cych siЙ w obliczeniach naukowych.
+przyszе┌oе⌡ci, bд≥dzie zawieraд┤ caе┌kowanie metodд┘ Monte Carlo oraz
+funkcje specjalne. Konsolidacja z GSL pozwala programom na dostд≥p do
+funkcji, ktцЁre mogд┘ byд┤ przydatne w rozwiд┘zywaniu wielu problemцЁw
+pojawiajд┘cych siд≥ w obliczeniach naukowych.
 
-%description -l pt_BR
-Esta И a biblioteca cientМfica do projeto GNU. Fornece acesso a
-funГУes para tratar muitos problemas que surgem em computaГЦo
-cientМfica.
+%description -l pt_BR.UTF-8
+Esta ц╘ a biblioteca cientц╜fica do projeto GNU. Fornece acesso a
+funц╖ц╣es para tratar muitos problemas que surgem em computaц╖цёo
+cientц╜fica.
 
-%description -l ru
-Это научная библиотека GNU. Сборка с ней дает доступ к функциям,
-решающим многие задачи, типичные для научных расчетов.
+%description -l ru.UTF-8
+п╜я┌п╬ п╫п╟я┐я┤п╫п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ GNU. п║п╠п╬я─п╨п╟ я│ п╫п╣п╧ п╢п╟п╣я┌ п╢п╬я│я┌я┐п© п╨ я└я┐п╫п╨я├п╦я▐п╪,
+я─п╣я┬п╟я▌я┴п╦п╪ п╪п╫п╬пЁп╦п╣ п╥п╟п╢п╟я┤п╦, я┌п╦п©п╦я┤п╫я▀п╣ п╢п╩я▐ п╫п╟я┐я┤п╫я▀я┘ я─п╟я│я┤п╣я┌п╬п╡.
 
-%description -l uk
-Це наукова б╕бл╕отека GNU. Зборка з нею да╓ доступ до функц╕й, що
-дозволяють розв'язати багато задач, типових для наукових розрахунк╕в.
+%description -l uk.UTF-8
+п╕п╣ п╫п╟я┐п╨п╬п╡п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ GNU. п≈п╠п╬я─п╨п╟ п╥ п╫п╣я▌ п╢п╟я■ п╢п╬я│я┌я┐п© п╢п╬ я└я┐п╫п╨я├я√п╧, я┴п╬
+п╢п╬п╥п╡п╬п╩я▐я▌я┌я▄ я─п╬п╥п╡'я▐п╥п╟я┌п╦ п╠п╟пЁп╟я┌п╬ п╥п╟п╢п╟я┤, я┌п╦п©п╬п╡п╦я┘ п╢п╩я▐ п╫п╟я┐п╨п╬п╡п╦я┘ я─п╬п╥я─п╟я┘я┐п╫п╨я√п╡.
 
 %package devel
 Summary:	Header files for developing programs using gsl
-Summary(pl):	Pliki nagЁСwkowe i dokumentacja do bibliotek gsl
-Summary(pt_BR):	Ferramentas de desenvolvimento para a gsl
-Summary(ru):	Файлы для разработки с научной библиотекой GNU (GSL)
-Summary(uk):	Файли для розробки з науковою б╕бл╕отекою GNU (GSL)
+Summary(pl.UTF-8):   Pliki nagе┌цЁwkowe i dokumentacja do bibliotek gsl
+Summary(pt_BR.UTF-8):   Ferramentas de desenvolvimento para a gsl
+Summary(ru.UTF-8):   п╓п╟п╧п╩я▀ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ я│ п╫п╟я┐я┤п╫п╬п╧ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╬п╧ GNU (GSL)
+Summary(uk.UTF-8):   п╓п╟п╧п╩п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п╥ п╫п╟я┐п╨п╬п╡п╬я▌ п╠я√п╠п╩я√п╬я┌п╣п╨п╬я▌ GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libgsl0-devel
@@ -72,58 +72,58 @@ Obsoletes:	libgsl0-devel
 %description devel
 Header files for developing programs using gsl.
 
-%description devel -l pl
-Pliki nagЁСwkowe i dokumentacja do bibliotek gsl.
+%description devel -l pl.UTF-8
+Pliki nagе┌цЁwkowe i dokumentacja do bibliotek gsl.
 
-%description devel -l pt_BR
-Arquivos de inclusЦo, bibliotecas e documentaГЦo necessАrio para
+%description devel -l pt_BR.UTF-8
+Arquivos de inclusцёo, bibliotecas e documentaц╖цёo necessц║rio para
 desenvolver aplicativos que utilizam a biblioteca gsl.
 
-%description devel -l ru
-Это библиотеки, хедеры и документация по использованию научной
-библиотеки GNU в ваших программах.
+%description devel -l ru.UTF-8
+п╜я┌п╬ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦, я┘п╣п╢п╣я─я▀ п╦ п╢п╬п╨я┐п╪п╣п╫я┌п╟я├п╦я▐ п©п╬ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦я▌ п╫п╟я┐я┤п╫п╬п╧
+п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ GNU п╡ п╡п╟я┬п╦я┘ п©я─п╬пЁя─п╟п╪п╪п╟я┘.
 
-%description devel -l uk
-Це б╕бл╕отеки, хедери та документац╕я по використанню науково╖
-б╕бл╕отеки GNU у ваших програмах.
+%description devel -l uk.UTF-8
+п╕п╣ п╠я√п╠п╩я√п╬я┌п╣п╨п╦, я┘п╣п╢п╣я─п╦ я┌п╟ п╢п╬п╨я┐п╪п╣п╫я┌п╟я├я√я▐ п©п╬ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▌ п╫п╟я┐п╨п╬п╡п╬я≈
+п╠я√п╠п╩я√п╬я┌п╣п╨п╦ GNU я┐ п╡п╟я┬п╦я┘ п©я─п╬пЁя─п╟п╪п╟я┘.
 
 %package static
 Summary:	Static gsl librariries
-Summary(pl):	Biblioteki statyczne gsl
-Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com gsl
-Summary(ru):	Статические библиотеки для разработки с научной библиотекой GNU (GSL)
-Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з науковою б╕бл╕отекою GNU (GSL)
+Summary(pl.UTF-8):   Biblioteki statyczne gsl
+Summary(pt_BR.UTF-8):   Bibliotecas estц║ticas para desenvolvimento com gsl
+Summary(ru.UTF-8):   п║я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ я│ п╫п╟я┐я┤п╫п╬п╧ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╬п╧ GNU (GSL)
+Summary(uk.UTF-8):   п║я┌п╟я┌п╦я┤п╫я√ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п╥ п╫п╟я┐п╨п╬п╡п╬я▌ п╠я√п╠п╩я√п╬я┌п╣п╨п╬я▌ GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static gsl librariries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne gsl.
 
-%description static -l pt_BR
-Bibliotecas estАticas para desenvolvimento com gsl.
+%description static -l pt_BR.UTF-8
+Bibliotecas estц║ticas para desenvolvimento com gsl.
 
-%description static -l ru
-Это статическая библиотека для использования научной библиотеки GNU в
-ваших программах.
+%description static -l ru.UTF-8
+п╜я┌п╬ я│я┌п╟я┌п╦я┤п╣я│п╨п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ п╢п╩я▐ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦я▐ п╫п╟я┐я┤п╫п╬п╧ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ GNU п╡
+п╡п╟я┬п╦я┘ п©я─п╬пЁя─п╟п╪п╪п╟я┘.
 
-%description static -l uk
-Це статична б╕бл╕отека для використання науково╖ б╕бл╕отеки GNU у
-ваших програмах.
+%description static -l uk.UTF-8
+п╕п╣ я│я┌п╟я┌п╦я┤п╫п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ п╢п╩я▐ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐ п╫п╟я┐п╨п╬п╡п╬я≈ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ GNU я┐
+п╡п╟я┬п╦я┘ п©я─п╬пЁя─п╟п╪п╟я┘.
 
 %package progs
 Summary:	gsl utility programs
-Summary(pl):	NarzЙdzia dla gsl
+Summary(pl.UTF-8):   Narzд≥dzia dla gsl
 Group:		Applications/Science
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description progs
 gsl utility programs.
 
-%description progs -l pl
-NarzЙdzia dla gsl.
+%description progs -l pl.UTF-8
+Narzд≥dzia dla gsl.
 
 %prep
 %setup -q
