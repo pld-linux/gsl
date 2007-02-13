@@ -1,9 +1,9 @@
 Summary:	The GNU Scientific Library for numerical analysis
-Summary(es.UTF-8):   Biblioteca científica del GNU
-Summary(pl.UTF-8):   GNU Scientific Library do analizy numerycznej
-Summary(pt_BR.UTF-8):   Biblioteca científica GNU
-Summary(ru.UTF-8):   Научная библиотека GNU для числового анализа
-Summary(uk.UTF-8):   Наукова бібліотека GNU для числового аналізу
+Summary(es.UTF-8):	Biblioteca científica del GNU
+Summary(pl.UTF-8):	GNU Scientific Library do analizy numerycznej
+Summary(pt_BR.UTF-8):	Biblioteca científica GNU
+Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
+Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
 Version:	1.8
 Release:	1
@@ -61,10 +61,10 @@ científica.
 
 %package devel
 Summary:	Header files for developing programs using gsl
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja do bibliotek gsl
-Summary(pt_BR.UTF-8):   Ferramentas de desenvolvimento para a gsl
-Summary(ru.UTF-8):   Файлы для разработки с научной библиотекой GNU (GSL)
-Summary(uk.UTF-8):   Файли для розробки з науковою бібліотекою GNU (GSL)
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do bibliotek gsl
+Summary(pt_BR.UTF-8):	Ferramentas de desenvolvimento para a gsl
+Summary(ru.UTF-8):	Файлы для разработки с научной библиотекой GNU (GSL)
+Summary(uk.UTF-8):	Файли для розробки з науковою бібліотекою GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libgsl0-devel
@@ -89,10 +89,10 @@ desenvolver aplicativos que utilizam a biblioteca gsl.
 
 %package static
 Summary:	Static gsl librariries
-Summary(pl.UTF-8):   Biblioteki statyczne gsl
-Summary(pt_BR.UTF-8):   Bibliotecas estáticas para desenvolvimento com gsl
-Summary(ru.UTF-8):   Статические библиотеки для разработки с научной библиотекой GNU (GSL)
-Summary(uk.UTF-8):   Статичні бібліотеки для розробки з науковою бібліотекою GNU (GSL)
+Summary(pl.UTF-8):	Biblioteki statyczne gsl
+Summary(pt_BR.UTF-8):	Bibliotecas estáticas para desenvolvimento com gsl
+Summary(ru.UTF-8):	Статические библиотеки для разработки с научной библиотекой GNU (GSL)
+Summary(uk.UTF-8):	Статичні бібліотеки для розробки з науковою бібліотекою GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
@@ -115,7 +115,7 @@ Bibliotecas estáticas para desenvolvimento com gsl.
 
 %package progs
 Summary:	gsl utility programs
-Summary(pl.UTF-8):   Narzędzia dla gsl
+Summary(pl.UTF-8):	Narzędzia dla gsl
 Group:		Applications/Science
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
