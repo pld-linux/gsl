@@ -5,13 +5,13 @@ Summary(pt_BR.UTF-8):	Biblioteca científica GNU
 Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
-Version:	1.10
+Version:	1.11
 Release:	1
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
-Source0:	ftp://sources.redhat.com/pub/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	faf5e178855ec952fe745a03d815da1d
+Source0:	http://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
+# Source0-md5:	f28f9de8bec867f3f4f436d3ed80680a
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
@@ -152,28 +152,33 @@ rm -rf $RPM_BUILD_ROOT
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%post devel	-p	/sbin/postshell
+%post	devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun devel	-p	/sbin/postshell
+%postun	devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libgsl.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgsl.so.0
+%attr(755,root,root) %{_libdir}/libgslcblas.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgslcblas.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gsl-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libgsl.so
+%attr(755,root,root) %{_libdir}/libgslcblas.so
+%{_libdir}/libgsl.la
+%{_libdir}/libgslcblas.la
 %{_includedir}/gsl
 %{_aclocaldir}/gsl.m4
-%{_pkgconfigdir}/*.pc
-%{_infodir}/gsl*.info*
+%{_pkgconfigdir}/gsl.pc
+%{_infodir}/gsl-ref.info*
 %{_mandir}/man1/gsl-config.1*
-%{_mandir}/man3/*
+%{_mandir}/man3/gsl.3*
 
 %files progs
 %defattr(644,root,root,755)
@@ -184,4 +189,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libgsl.a
+%{_libdir}/libgslcblas.a
