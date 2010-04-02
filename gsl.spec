@@ -5,13 +5,13 @@ Summary(pt_BR.UTF-8):	Biblioteca científica GNU
 Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
-Version:	1.12
+Version:	1.14
 Release:	1
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	3ec101903c8157756fa1352161bd4c39
+# Source0-md5:	d55e7b141815412a072a3f0e12442042
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/

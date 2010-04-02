@@ -1,14 +1,14 @@
---- gsl-0.6/doc/gsl-ref.texi	Sat May 20 03:05:20 2000
-+++ gsl-0.6.new/doc/gsl-ref.texi	Wed Jun  7 08:05:53 2000
-@@ -7,9 +7,9 @@
- @c @setchapternewpage odd
+--- gsl-1.14/doc/gsl-ref.texi.orig	2010-03-10 11:57:13.000000000 +0100
++++ gsl-1.14/doc/gsl-ref.texi	2010-04-02 22:15:53.220993924 +0200
+@@ -11,9 +11,9 @@
+ @end ifset
  @c %**end of header
  
--@dircategory Scientific software
+-@dircategory Software libraries
 +@dircategory Libraries:
  @direntry
 -* gsl-ref: (gsl-ref).                   GNU Scientific Library -- Reference
 +* gsl-ref: (gsl-ref).			GNU Scientific Library -- Reference
  @end direntry
  
- @tex
+ @c How to use the math macros
