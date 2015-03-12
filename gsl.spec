@@ -6,7 +6,7 @@ Summary(ru.UTF-8):	Научная библиотека GNU для числово
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
 Version:	1.16
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
