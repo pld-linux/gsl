@@ -5,19 +5,19 @@ Summary(pt_BR.UTF-8):	Biblioteca científica GNU
 Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
-Version:	2.1
+Version:	2.2
 Release:	1
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	d8f70abafd3e9f0bae03c52d1f4e8de5
+# Source0-md5:	c3890bfc5e177b0c231069272b22a37c
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	libtool >= 1:1.4.2-9
+BuildRequires:	libtool >= 2:2
 BuildRequires:	texinfo
 Obsoletes:	libgsl0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
