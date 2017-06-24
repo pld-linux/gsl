@@ -1,14 +1,27 @@
---- gsl-1.14/doc/gsl-ref.texi.orig	2010-03-10 11:57:13.000000000 +0100
-+++ gsl-1.14/doc/gsl-ref.texi	2010-04-02 22:15:53.220993924 +0200
-@@ -11,9 +11,9 @@
- @end ifset
+--- gsl-2.4/doc/conf.py.orig	2017-06-14 11:13:45.000000000 +0200
++++ gsl-2.4/doc/conf.py	2017-06-21 21:27:33.698662447 +0200
+@@ -188,8 +188,8 @@
+ #  dir menu entry, description, category)
+ texinfo_documents = [
+     (master_doc, 'gsl-ref', title,
+-     author, 'GSL', 'One line description of project.',
+-     'Miscellaneous'),
++     author, 'GSL', 'GNU Scientific Library - Reference',
++     'Libraries:'),
+ ]
+ 
+ 
+--- gsl-2.4/doc/gsl-design.texi.orig	2017-05-03 15:17:42.000000000 +0200
++++ gsl-2.4/doc/gsl-design.texi	2017-06-22 16:06:16.507896023 +0200
+@@ -6,9 +6,9 @@
+ @c -@setchapternewpage odd
  @c %**end of header
  
--@dircategory Software libraries
+-@dircategory Scientific software
 +@dircategory Libraries:
  @direntry
--* gsl-ref: (gsl-ref).                   GNU Scientific Library -- Reference
-+* gsl-ref: (gsl-ref).			GNU Scientific Library -- Reference
+-* GSL-design: (GSL-design).             GNU Scientific Library -- Design
++* GSL-design: (GSL-design).		GNU Scientific Library - Design
  @end direntry
  
- @c How to use the math macros
+ @comment @include version-design.texi

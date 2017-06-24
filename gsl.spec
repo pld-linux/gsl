@@ -5,13 +5,13 @@ Summary(pt_BR.UTF-8):	Biblioteca científica GNU
 Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
-Version:	2.3
+Version:	2.4
 Release:	1
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	905fcbbb97bc552d1037e34d200931a0
+# Source0-md5:	dba736f15404807834dc1c7b93e83b92
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
@@ -19,6 +19,7 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:2
 BuildRequires:	texinfo
+BuildRequires:	sphinx-pdg
 Obsoletes:	libgsl0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -130,6 +131,9 @@ Narzędzia dla gsl.
 %patch0 -p1
 %patch1 -p1
 
+# force regeneration by sphins
+%{__rm} doc/gsl-ref.info
+
 %build
 %{__libtoolize}
 %{__aclocal}
@@ -138,6 +142,8 @@ Narzędzia dla gsl.
 %{__automake}
 %configure
 %{__make}
+
+%{__make} -C doc info
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -162,7 +168,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_libdir}/libgsl.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgsl.so.19
+%attr(755,root,root) %ghost %{_libdir}/libgsl.so.23
 %attr(755,root,root) %{_libdir}/libgslcblas.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libgslcblas.so.0
 
