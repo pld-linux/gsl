@@ -18,8 +18,9 @@ URL:		http://www.gnu.org/software/gsl/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:2
+BuildRequires:	python3-sphinx_rtd_theme
+BuildRequires:	sphinx-pdg-3
 BuildRequires:	texinfo
-BuildRequires:	sphinx-pdg
 Obsoletes:	libgsl0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -143,7 +144,8 @@ Narzędzia dla gsl.
 %configure
 %{__make}
 
-%{__make} -C doc info
+%{__make} -C doc info \
+	SPHINX_BUILD=sphinx-build-3
 
 %install
 rm -rf $RPM_BUILD_ROOT
