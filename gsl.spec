@@ -5,13 +5,13 @@ Summary(pt_BR.UTF-8):	Biblioteca científica GNU
 Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
-Version:	2.7
+Version:	2.7.1
 Release:	1
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
 Source0:	https://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	9e47e81caaebcd92b7aca27a5348df74
+# Source0-md5:	36aee97e67f64dbdab7afae197e3483b
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
@@ -170,7 +170,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_libdir}/libgsl.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgsl.so.25
+%attr(755,root,root) %ghost %{_libdir}/libgsl.so.27
 %attr(755,root,root) %{_libdir}/libgslcblas.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libgslcblas.so.0
 
