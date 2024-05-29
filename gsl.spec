@@ -5,13 +5,13 @@ Summary(pt_BR.UTF-8):	Biblioteca científica GNU
 Summary(ru.UTF-8):	Научная библиотека GNU для числового анализа
 Summary(uk.UTF-8):	Наукова бібліотека GNU для числового аналізу
 Name:		gsl
-Version:	2.7.1
+Version:	2.8
 Release:	1
 Epoch:		1
 License:	GPL v3+
 Group:		Libraries
 Source0:	https://ftp.gnu.org/gnu/gsl/%{name}-%{version}.tar.gz
-# Source0-md5:	36aee97e67f64dbdab7afae197e3483b
+# Source0-md5:	182ec03204f164e67238c9116591a37d
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.gnu.org/software/gsl/
@@ -21,7 +21,7 @@ BuildRequires:	libtool >= 2:2
 BuildRequires:	python3-sphinx_rtd_theme
 BuildRequires:	sphinx-pdg-3
 BuildRequires:	texinfo
-Obsoletes:	libgsl0
+Obsoletes:	libgsl0 < 2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,7 +69,7 @@ Summary(ru.UTF-8):	Файлы для разработки с научной би
 Summary(uk.UTF-8):	Файли для розробки з науковою бібліотекою GNU (GSL)
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-Obsoletes:	libgsl0-devel
+Obsoletes:	libgsl0-devel < 2
 
 %description devel
 Header files for developing programs using gsl.
@@ -170,7 +170,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_libdir}/libgsl.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgsl.so.27
+%attr(755,root,root) %ghost %{_libdir}/libgsl.so.28
 %attr(755,root,root) %{_libdir}/libgslcblas.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libgslcblas.so.0
 
