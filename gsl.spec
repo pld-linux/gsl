@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_with	tests	# unit tests (multifit_nlinear test fails on x86)
+
 Summary:	The GNU Scientific Library for numerical analysis
 Summary(es.UTF-8):	Biblioteca científica del GNU
 Summary(pl.UTF-8):	GNU Scientific Library do analizy numerycznej
@@ -146,6 +150,10 @@ Narzędzia dla gsl.
 
 %{__make} -C doc info \
 	SPHINX_BUILD=sphinx-build-3
+
+%if %{with tests}
+%{__make} check
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
